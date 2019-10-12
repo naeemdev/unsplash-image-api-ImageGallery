@@ -1,5 +1,6 @@
 package com.movefastimagegallery_
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -17,6 +18,7 @@ import com.movefastimagegallery_.Helper.Utils
 import com.movefastimagegallery_.Model.ImagesUrl_Model
 import com.movefastimagegallery_.listeners.ListItemClickListener
 import com.movefastimagegallery_.listeners.ResponseListener
+import java.io.Serializable
 import java.util.*
 
 class MainActivity : AppCompatActivity(), ResponseListener, ListItemClickListener {
@@ -151,7 +153,23 @@ class MainActivity : AppCompatActivity(), ResponseListener, ListItemClickListene
 
     }
 
+
+    /*
+     its ListItemClickListener interface method
+     its deal with RecyclerView item click
+     start new activit and pass data to another activity using Serializable
+     passing full object of ImagesUrl_Model from list
+
+      */
     override fun onListItemClick(position: Int, action: String) {
+
+
+        val mImagesUrl_Model = mImagesUrl_ModelList[position]
+        startActivity(
+            Intent(this, ImageDetail_Activity::class.java)
+                .putExtra("list", mImagesUrl_Model as Serializable)
+                .putExtra("pos", position)
+        )
 
     }
 

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Move Fast Image </string>
     <string name="nointernet">check your Internet</string>
+    <string name="title_activity_image_detail_">Detail</string>
+    <string name="related">Related</string>
 </resources>
