@@ -32,4 +32,22 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    /// glide for image loading
+    //implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+      //okhttp3
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.1.0'
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.6.1"
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    ///for dimens different screen  handling
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 }
