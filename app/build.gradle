@@ -22,6 +22,7 @@ android {
         }
     }
 
+
 }
 
 dependencies {
@@ -41,7 +42,6 @@ dependencies {
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:2.6.1"
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
-
     //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     //cardview

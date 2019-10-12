@@ -2,6 +2,7 @@ package com.movefastimagegallery_.API
 
 object Constants {
 
+
     // BASE URL
     val BASE_URL = "https://api.unsplash.com/"
     //UNSPLASH CLIENT ID
