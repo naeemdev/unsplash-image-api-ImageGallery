@@ -1,5 +1,6 @@
 package com.movefastimagegallery_
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -178,6 +179,32 @@ class ImageDetail_Activity : AppCompatActivity(), ResponseListener, ListItemClic
     override fun onListItemClick(position: Int, action: String) {
         mImagesUrl_Model = mImagesUrl_ModelList[position]
         setdata()
+    }
+
+
+    fun OnDetailMenuClick(view: View) {
+        when (view.id) {
+            R.id.img_Photo ->
+                /*
+                 start new activity for
+                Checking  full screen image with zooming and Apply  feature
+                and pass image url to another activity to showing image .
+                 */
+                startActivity(
+                    Intent(this@ImageDetail_Activity, FullImage_Activity::class.java)
+                        .putExtra("imgeurl", mImagesUrl_Model!!.full)
+                )
+            R.id.img_download -> {
+                /*
+                download click
+                 */
+            }
+            R.id.img_Share -> {
+                /*
+                Share click
+                 */
+            }
+        }
     }
 
 }
